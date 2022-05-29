@@ -49,13 +49,13 @@ if innumber == "q":
 else:
 	try:
 		number = int(innumber)
+		for _ in range(1, number):
+			# Call function draw_triangle()
+			draw_triangle(random.choice(sizelist), \
+			  random.choice(colorlist), random.randint(-175, 175), \
+			  random.randint(-175, 175), random.randrange(0, 360, 10))
 	except ValueError as ve:
 		print("Please enter an integer.")
-	for _ in range(1, number):
-		# Call function draw_triangle()
-		draw_triangle(random.choice(sizelist), \
-		  random.choice(colorlist), random.randint(-175, 175), \
-		  random.randint(-175, 175), random.randrange(0, 360, 10))
 
-print("Drawing triangles complete, click on triangles' window to exit.")
+print("Please click on triangles' window to exit.")
 window.exitonclick()
